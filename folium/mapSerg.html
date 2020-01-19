@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_561b199620ef4d2995ee82f0e9a5d96f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_561b199620ef4d2995ee82f0e9a5d96f" ></div>
+        
+</body>
+<script>    
+    
+            var map_561b199620ef4d2995ee82f0e9a5d96f = L.map(
+                "map_561b199620ef4d2995ee82f0e9a5d96f",
+                {
+                    center: [29.784979042857145, -95.40766144285715],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7a09bb274e704e339f0c177e5ab2fe13 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_561b199620ef4d2995ee82f0e9a5d96f);
+        
+    
+            var feature_group_5f089fd0494a4f81845c1ed802940a02 = L.featureGroup(
+                {}
+            ).addTo(map_561b199620ef4d2995ee82f0e9a5d96f);
+        
+    
+            var marker_ed762d0421b14ca8947c5b27a850082a = L.marker(
+                [29.8077211, -95.37901250000002],
+                {}
+            ).addTo(feature_group_5f089fd0494a4f81845c1ed802940a02);
+        
+    
+            var icon_769e02318e76447ba78477128ca180ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ed762d0421b14ca8947c5b27a850082a.setIcon(icon_769e02318e76447ba78477128ca180ca);
+        
+    
+        var popup_5cad441450024944bd9cd931c53d3599 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ff6d5c8adca94052a83d6a39a5d98ab6 = $(`<div id="html_ff6d5c8adca94052a83d6a39a5d98ab6" style="width: 100.0%; height: 100.0%;"><a href=https://www.har.com/search/dosearch?for_sale=1&mlsnum=12595787>MLS# 12595787 Undervalued: $51100</a></div>`)[0];
+            popup_5cad441450024944bd9cd931c53d3599.setContent(html_ff6d5c8adca94052a83d6a39a5d98ab6);
+        
+
+        marker_ed762d0421b14ca8947c5b27a850082a.bindPopup(popup_5cad441450024944bd9cd931c53d3599)
+        ;
+
+        
+    
+    
+            var marker_95b592a96a51487c90db554809d2a222 = L.marker(
+                [29.8077787, -95.3795214],
+                {}
+            ).addTo(feature_group_5f089fd0494a4f81845c1ed802940a02);
+        
+    
+            var icon_515463ae02b14a29b6ff3ca12dda6ea8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_95b592a96a51487c90db554809d2a222.setIcon(icon_515463ae02b14a29b6ff3ca12dda6ea8);
+        
+    
+        var popup_fb88fd3b60fd401ca6ec06322fdc479e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ae5a2eb2c664aeeb097958e02d809c6 = $(`<div id="html_1ae5a2eb2c664aeeb097958e02d809c6" style="width: 100.0%; height: 100.0%;"><a href=https://www.har.com/search/dosearch?for_sale=1&mlsnum=33129340>MLS# 33129340 Undervalued: $61100</a></div>`)[0];
+            popup_fb88fd3b60fd401ca6ec06322fdc479e.setContent(html_1ae5a2eb2c664aeeb097958e02d809c6);
+        
+
+        marker_95b592a96a51487c90db554809d2a222.bindPopup(popup_fb88fd3b60fd401ca6ec06322fdc479e)
+        ;
+
+        
+    
+    
+            var marker_325f596dff1e416d99afe9334d6a5f62 = L.marker(
+                [29.8113757, -95.4144747],
+                {}
+            ).addTo(feature_group_5f089fd0494a4f81845c1ed802940a02);
+        
+    
+            var icon_a3683aace4ee41f9bf45fd57c8337dc2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_325f596dff1e416d99afe9334d6a5f62.setIcon(icon_a3683aace4ee41f9bf45fd57c8337dc2);
+        
+    
+        var popup_f28d3161a02d4540bcb0f78e1c92d61c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_502d69e00816426ebdc8405613790078 = $(`<div id="html_502d69e00816426ebdc8405613790078" style="width: 100.0%; height: 100.0%;"><a href=https://www.har.com/search/dosearch?for_sale=1&mlsnum=57639673>MLS# 57639673 Undervalued: $66000</a></div>`)[0];
+            popup_f28d3161a02d4540bcb0f78e1c92d61c.setContent(html_502d69e00816426ebdc8405613790078);
+        
+
+        marker_325f596dff1e416d99afe9334d6a5f62.bindPopup(popup_f28d3161a02d4540bcb0f78e1c92d61c)
+        ;
+
+        
+    
+    
+            var marker_f1138383f9864aa4ac57a8f24d4bf48b = L.marker(
+                [29.7284773, -95.4344337],
+                {}
+            ).addTo(feature_group_5f089fd0494a4f81845c1ed802940a02);
+        
+    
+            var icon_62a7410901c44d64a83805c06067fd16 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f1138383f9864aa4ac57a8f24d4bf48b.setIcon(icon_62a7410901c44d64a83805c06067fd16);
+        
+    
+        var popup_c9389e9625554b7da68b6dac9fd658cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1cff330d32b74fabab2ac5d0cffa8dcf = $(`<div id="html_1cff330d32b74fabab2ac5d0cffa8dcf" style="width: 100.0%; height: 100.0%;"><a href=https://www.har.com/search/dosearch?for_sale=1&mlsnum=39558359>MLS# 39558359 Undervalued: $66000</a></div>`)[0];
+            popup_c9389e9625554b7da68b6dac9fd658cc.setContent(html_1cff330d32b74fabab2ac5d0cffa8dcf);
+        
+
+        marker_f1138383f9864aa4ac57a8f24d4bf48b.bindPopup(popup_c9389e9625554b7da68b6dac9fd658cc)
+        ;
+
+        
+    
+    
+            var marker_ee76354bee55450fb887267a804e10a7 = L.marker(
+                [29.7999993, -95.4048146],
+                {}
+            ).addTo(feature_group_5f089fd0494a4f81845c1ed802940a02);
+        
+    
+            var icon_6cd19b720ea0465c8a431ee9cd2f66e1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_ee76354bee55450fb887267a804e10a7.setIcon(icon_6cd19b720ea0465c8a431ee9cd2f66e1);
+        
+    
+        var popup_77c5656acb014e0d971e68b9751d146a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7af6c44d50344a208d8904315494fc69 = $(`<div id="html_7af6c44d50344a208d8904315494fc69" style="width: 100.0%; height: 100.0%;"><a href=https://www.har.com/search/dosearch?for_sale=1&mlsnum=59642597>MLS# 59642597 Undervalued: $7000</a></div>`)[0];
+            popup_77c5656acb014e0d971e68b9751d146a.setContent(html_7af6c44d50344a208d8904315494fc69);
+        
+
+        marker_ee76354bee55450fb887267a804e10a7.bindPopup(popup_77c5656acb014e0d971e68b9751d146a)
+        ;
+
+        
+    
+    
+            var marker_d281fc4c20cb46a8bd3ef4566c5abca0 = L.marker(
+                [29.7830844, -95.4345123],
+                {}
+            ).addTo(feature_group_5f089fd0494a4f81845c1ed802940a02);
+        
+    
+            var icon_5eed0ce5185848128162496e00ec1682 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d281fc4c20cb46a8bd3ef4566c5abca0.setIcon(icon_5eed0ce5185848128162496e00ec1682);
+        
+    
+        var popup_e8d73c43e9ff43cb9ff7e859220e4deb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0d7da0829f9c447a985d858c13a0198f = $(`<div id="html_0d7da0829f9c447a985d858c13a0198f" style="width: 100.0%; height: 100.0%;"><a href=https://www.har.com/search/dosearch?for_sale=1&mlsnum=2833150>MLS# 2833150 Undervalued: $42000</a></div>`)[0];
+            popup_e8d73c43e9ff43cb9ff7e859220e4deb.setContent(html_0d7da0829f9c447a985d858c13a0198f);
+        
+
+        marker_d281fc4c20cb46a8bd3ef4566c5abca0.bindPopup(popup_e8d73c43e9ff43cb9ff7e859220e4deb)
+        ;
+
+        
+    
+    
+            var marker_9b326120643446d585931b7b7d119a67 = L.marker(
+                [29.7564168, -95.4068609],
+                {}
+            ).addTo(feature_group_5f089fd0494a4f81845c1ed802940a02);
+        
+    
+            var icon_443aa00304824f8f87f811f1b266acb4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_9b326120643446d585931b7b7d119a67.setIcon(icon_443aa00304824f8f87f811f1b266acb4);
+        
+    
+        var popup_e573bfcf06d042bf80ce5ccacc6f7dac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6353c09c01814c0e92eca4cd1e093019 = $(`<div id="html_6353c09c01814c0e92eca4cd1e093019" style="width: 100.0%; height: 100.0%;"><a href=https://www.har.com/search/dosearch?for_sale=1&mlsnum=20996563>MLS# 20996563 Undervalued: $22000</a></div>`)[0];
+            popup_e573bfcf06d042bf80ce5ccacc6f7dac.setContent(html_6353c09c01814c0e92eca4cd1e093019);
+        
+
+        marker_9b326120643446d585931b7b7d119a67.bindPopup(popup_e573bfcf06d042bf80ce5ccacc6f7dac)
+        ;
+
+        
+    
+</script>
