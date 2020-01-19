@@ -22,7 +22,5 @@ sqft_range = [2400, 3000]
 yr_built_range = [2016, 2020]
 
 # map file name
-map_name = 'map1919'
+map_name = 'mapSerg'
 
-
-# TODO: change coordinate source to improve speed and location accuracy

@@ -1,24 +1,33 @@
 import folium
-from analysis_market import run_analysis
-from selenium import webdriver
 import time
 from config import map_name
+from urllib import request
+import json
 
+def get_coordinates(address):
+    map_key= 'AIzaSyCZHQIOMDfWZkpS-fbYVijURAEuq51xUnY'
+    address = address.strip()
+    address = address.replace(',','').replace(' ','+').replace('#','')
 
-def setup_webdriver():
-    driver = -1
+    url_ = 'https://maps.googleapis.com/maps/api/geocode/json?address='+address+'&key='+ map_key
+
     try:
-        driver = webdriver.Firefox(executable_path = './geckodriver')
-        driver.set_window_position(-150000, 150000)
-        driver.set_page_load_timeout(60)
-
+        response = request.urlopen(url_)
+        time.sleep(1)
     except Exception as e:
-        msg = 'an error occurred while setting up webdriver\n' + str(e)
-        print(msg)
+        print('Error while requesting url for coordinates')
+        print(e)
 
-    finally:
-        return driver
+    result = json.loads(response.read())
 
+    if result['status'] == 'OK':
+        lat = result['results'][0]['geometry']['location']['lat']
+        lng = result['results'][0]['geometry']['location']['lng']
+        return (lat, lng)
+
+    else:
+        print('Error while getting coordinates. \naddress: '+address+'\nresult[status]')
+        raise Exception(result['status'])
 
 def create_map(df):
 
@@ -30,34 +39,18 @@ def create_map(df):
     df.loc[:,'lat'] = 0
     df.loc[:,'lon'] = 0
 
-    driver = setup_webdriver()
-
     # get coordinates
-    i = 0
+    i=0
     try:
         for addrs in list(df['address']):
-
-            driver.get('https://www.google.com/maps')
-            time.sleep(5)
-            driver.find_element_by_xpath("//input[@class='tactile-searchbox-input']").send_keys(addrs)
-            time.sleep(1)
-            driver.find_element_by_xpath("//button[@id='searchbox-searchbutton']").click()
-            time.sleep(9)
-
-            url_ = str(driver.current_url)
-            url_ = url_.split(',')
-
-            df.loc[i, 'lon'] = float(url_[-2])
-            df.loc[i, 'lat'] = float(url_[-3].split('@')[-1])
-
-            print('got coordinates for',i+1)
+            (lat, lng) = get_coordinates(addrs)
+            print(i,lat,lng,addrs)
+            df.loc[i, 'lon'] = lng
+            df.loc[i, 'lat'] = lat
             i+=1
-
     except Exception as e:
         print('error while obtaining coordinates')
         print(e)
-
-    
 
     # get mls link
     def get_mls_link(x):
@@ -70,7 +63,7 @@ def create_map(df):
     for i in range(len(df['mls'])):
         df.at[i,'mls_link'] = get_mls_link(df.loc[i,'mls'])
 
-    driver.close()
+    # TODO: edit map url to open link in new tab
 
     # create map
     map = folium.Map(location=[df['lat'].mean(), df['lon'].mean()], zoom_start=13)
@@ -84,14 +77,4 @@ def create_map(df):
     map.add_child(fg)
     map.save('./folium/'+map_name+'.html')
 
-    return df
-
-
-
-df_value = run_analysis()
-
-print(df_value.head())
-print(df_value.shape)
-
-df=create_map(df_value)
 

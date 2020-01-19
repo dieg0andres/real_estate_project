@@ -6,7 +6,7 @@ from pickling import unpickle_data
 
 df = unpickle_data('data/df_listing.pickle')
 
-def coordinates(address):
+def get_coordinates(address):
     map_key= 'AIzaSyCZHQIOMDfWZkpS-fbYVijURAEuq51xUnY'
     address = address.strip()
     address = address.replace(',','').replace(' ','+').replace('#','')

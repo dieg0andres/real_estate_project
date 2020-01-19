@@ -5,10 +5,12 @@ from pickling import pickle_df
 from analysis_market import run_analysis
 
 def listing_thread():
+    print('starting listing thread')
     df = scrape_har_listing()
     pickle_df('./data/df_listing.pickle',df)
 
 def sold_thread():
+    print('starting sold thread')
     df = scrape_har_sold()
     pickle_df('./data/df_sold.pickle', df)
 
