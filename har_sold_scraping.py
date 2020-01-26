@@ -78,7 +78,7 @@ def scrape_har_sold():
 
     df_master = pd.DataFrame()
 
-    step = 100000
+    step = 50000
     min_prices = range(param['price_min'],param['price_max'],step)
     max_prices = range(param['price_min']+step,param['price_max']+step,step)
 

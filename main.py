@@ -15,6 +15,7 @@ def sold_thread():
     pickle_df('./data/df_sold.pickle', df)
 
 def run_scraping():
+
     t_list = threading.Thread(target=listing_thread)
     t_sold = threading.Thread(target=sold_thread)
 
@@ -29,7 +30,7 @@ def run_scraping():
 def main():
 
     run_scraping()
-    run_analysis()
+ #   run_analysis()
 
 
 
