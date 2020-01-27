@@ -12,6 +12,7 @@ def listing_thread():
 def sold_thread():
     print('starting sold thread')
     df = scrape_har_sold()
+    print('im here')
     pickle_df('./data/df_sold.pickle', df)
 
 def run_scraping():
@@ -30,7 +31,7 @@ def run_scraping():
 def main():
 
     run_scraping()
- #   run_analysis()
+    run_analysis()
 
 
 

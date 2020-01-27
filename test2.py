@@ -14,7 +14,6 @@ def get_url(zip_code, page, min_p, max_p, bedroom_min, bath_min):
            'garage_desc=&price_sqft_min=&price_sqft_max=&mlsnums=&listing_officeid=&listing_agentid=&search_id=&community=&hoa_fee_max='
     return url_
 
-
 def scrape_page(url_):
 
     response = get(url_)
@@ -80,8 +79,8 @@ def scrape_page(url_):
             raise Exception('not all lists have same length in HAR_sold_scraping!')
 
     df = pd.DataFrame(prop)
+    print('im here')
     return df
-
 
 def scrape_har_sold():
 
@@ -106,3 +105,7 @@ def scrape_har_sold():
                 if df.empty: break
 
     return df_master
+
+
+temp_url='https://www.har.com/search/soldsearch?page=9&region_id=1&soldperiod=2&zip_code=77007&listing_price_min=500000&listing_price_max=700000&year_built_min=2018&for_sale=1&streetaddress=&city=&subdivisions=&nid=&map_tools_nwlat=&map_tools_nwlng=&map_tools_selat=&map_tools_selng=&map_tools_polygon=&fips_code=&schoolid=&mlsnum=&property_status=&bedroom_min=&bedroom_max=&full_bath_min=&full_bath_max=&square_feet_min=&square_feet_max=&year_built_max=&stories=&lotsize_min=&lotsize_max=&style=&acres_min=&acres_max=&garage_num=&garage_desc=&price_sqft_min=&price_sqft_max=&mlsnums=&listing_officeid=&listing_agentid=&search_id=&community=&hoa_fee_max='
+df = scrape_page(temp_url)
